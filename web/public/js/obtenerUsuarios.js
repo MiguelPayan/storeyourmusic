@@ -12,9 +12,9 @@ fetch('https://backstoreyourmusic.onrender.com/usuarios')
     container.innerHTML = `<ul>${ptl}</ul>`;
     
 })
-.catch(error){
+.catch((error)=>{
 console.log(error)
-}
+})
 
 
 console.log('FIN')
