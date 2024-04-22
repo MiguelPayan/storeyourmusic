@@ -10,6 +10,19 @@ function parseJwt (token) {
     return JSON.parse(jsonPayload);
 }
 
+if(credenciales == null){
+    btn_cerrar_sesion = document.getElementById("cerrar_sesion");
+    btn_cerrar_sesion.style.display = "none"
+}else{
+    btn_cerrar_sesion = document.getElementById("cerrar_sesion");
+    btn_cerrar_sesion.style.display = "inline-block";
+    btn_cerrar_sesion.onclick = function cerrarSesion (){
+        sessionStorage.removeItem("token");
+        credenciales = null;
+        location.reload();
+    };
+}
+
 credenciales = parseJwt(credenciales);
 console.log(credenciales);
 const imagenPerfil = document.createElement("img")
