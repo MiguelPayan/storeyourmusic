@@ -35,13 +35,11 @@ async function eliminar(boton){
   } catch (error) {
     console.error("Error de red:", error);
   }
-
+  location.reload()
 }
-let headers = new Headers();
-headers.append('Access-Control-Allow-Origin', 'http://localhost:5500');
-headers.append('Access-Control-Allow-Credentials', 'true');
 
-fetch('https://backstoreyourmusic.onrender.com/usuarios', {headers: headers})
+
+fetch('https://backstoreyourmusic.onrender.com/usuarios')
 .then((response) =>response.json())
 .then((users)=>{
     let ptl = users.map(user => `<li>${user.email} ✉️ ${user.name} <button onclick="eliminar(this)">Eliminar</button></li>`);
