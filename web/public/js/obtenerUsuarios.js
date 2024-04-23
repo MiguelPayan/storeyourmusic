@@ -76,13 +76,12 @@ style.textContent = `
     padding: 8px 16px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     border-radius: 4px;
     cursor: pointer;
     transition-duration: 0.4s;
-    position: absolute; right: 0;
+    float: right;
     }
   
   
