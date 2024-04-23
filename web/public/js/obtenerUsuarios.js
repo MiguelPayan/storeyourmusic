@@ -4,7 +4,7 @@
 const container = document.querySelector(".container");
 
 async function eliminar(boton){
-  // Obtener el elemento padre (el <li>) del botón clicado
+    // Obtener el elemento padre (el <li>) del botón clicado
   let liElemento = boton.parentNode;
 
   // Obtener el contenido del <li>
@@ -42,19 +42,14 @@ async function eliminar(boton){
 fetch('https://backstoreyourmusic.onrender.com/usuarios')
 .then((response) =>response.json())
 .then((users)=>{
-  let userListHTML = '';
-  users.forEach(user => {
-    userListHTML += `
-      <li>
-        <img src="${user.imageUrl}" alt="${user.name}" style="width: 50px; height: 50px;"> <!-- Ajusta el tamaño de la imagen según sea necesario -->
-        <span>${user.email}</span> <!-- Coloca el correo electrónico después de la imagen -->
-        <button onclick="eliminar(this)">Eliminar</button>
-      </li>`;
-  });
-  container.innerHTML = `<ul>${userListHTML}</ul>`;
+    let ptl = users.map(user => `<li>${user.email} ✉️ ${user.name} <button onclick="eliminar(this)">Eliminar</button></li>`);
+    ptl = ptl.join('');
+    container.innerHTML = `<ul>${ptl}</ul>`;
+    
 })
 .catch((error)=>{
-  console.log(error)
+console.log(error)
 })
+
 
 console.log('FIN')
