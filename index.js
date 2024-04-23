@@ -59,7 +59,7 @@ try{
         console.log("hola")
         
         btn_usuarios.onclick = function usuariosRegistrados(){
-            location.href("/public/html/usuarios.html");
+            window.location = ("/web/public/html/usuarios.html");
         }
     }else{
         btn_usuarios.style.display = "none";
