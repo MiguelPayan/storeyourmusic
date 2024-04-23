@@ -42,7 +42,7 @@ async function eliminar(boton){
 fetch('https://backstoreyourmusic.onrender.com/usuarios')
 .then((response) =>response.json())
 .then((users)=>{
-    let ptl = users.map(user => `<li>${user.email} ✉️ ${user.name} <button onclick="eliminar(this)">Eliminar</button></li>`);
+    let ptl = users.map(user => `<li>${user.email} ✉️ ${user.name} <button class="" onclick="eliminar(this)">Eliminar</button></li>`);
     ptl = ptl.join('');
     container.innerHTML = `<ul>${ptl}</ul>`;
     
