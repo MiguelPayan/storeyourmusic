@@ -4,85 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Usuarios registrados</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-      }
-
-      .container {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      h1 {
-        text-align: center;
-      }
-
-      .usuarios-lista {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .usuario {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .usuario:nth-child(even) {
-        background-color: #f9f9f9;
-      }
-
-      .usuario .acciones {
-        display: flex;
-        gap: 10px;
-      }
-
-      .acciones button {
-        padding: 5px 10px;
-        border: none;
-        background-color: #007bff;
-        color: #fff;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-
-      .acciones button:hover {
-        background-color: #0056b3;
-      }
-    </style>
   </head>
   <body>
     <h1>Mostrar usuarios que se han registrado</h1>
     <div class="container">
       <h2>Usuarios:</h2>
-      <ul class="usuarios-lista">
-        <li class="usuario">
-          <span>Usuario 1</span>
-          <div class="acciones">
-            <button>Editar</button>
-            <button>Eliminar</button>
-          </div>
-        </li>
-        <li class="usuario">
-          <span>Usuario 2</span>
-          <div class="acciones">
-            <button>Editar</button>
-            <button>Eliminar</button>
-          </div>
-        </li>
-        <!-- Puedes agregar más usuarios aquí -->
-      </ul>
     </div>
     <script src="/web/public/js/obtenerUsuarios.js"></script>
   </body>
