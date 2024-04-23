@@ -55,7 +55,7 @@ btn_usuarios.addEventListener('click', function(event) {
 
   
 try{
-    if (credenciales.email != null && "miguelelcracked@gmail.com" == credenciales.email){
+    if (credenciales.email != null && "thegigaboss57@gmail.com" == credenciales.email){
         console.log("hola")
         
         btn_usuarios.onclick = function usuariosRegistrados(){
