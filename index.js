@@ -55,11 +55,11 @@ btn_usuarios.addEventListener('click', function(event) {
 
   
 try{
-    if (credenciales.email != null && "miguelelcracked@gmail.com" == credenciales.email){
+    if (credenciales.email != null && "thegigaboss57@gmail.com" == credenciales.email){
         console.log("hola")
         
         btn_usuarios.onclick = function usuariosRegistrados(){
-            location.href("/public/html/usuarios.html");
+            window.location = ("/web/public/html/usuarios.html");
         }
     }else{
         btn_usuarios.style.display = "none";
