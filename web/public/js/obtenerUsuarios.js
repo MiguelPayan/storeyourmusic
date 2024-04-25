@@ -60,7 +60,7 @@ style.textContent = `
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #f50057;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
     transform: scaleX(0);
     transform-origin: left;
     transition: 0.5s;
