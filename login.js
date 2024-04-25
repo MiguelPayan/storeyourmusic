@@ -10,6 +10,7 @@ function handleCredentialResponse(response) {
 
     let informaciongoogle = {
       email : respuestaLogin.email,
+      picture: respuestaLogin.picture,
       name : respuestaLogin.name,
       familyname : respuestaLogin.family_name
     }
