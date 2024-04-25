@@ -23,6 +23,10 @@
     padding: 0 20px;
 }
 
+body {
+    font-family: 'Poppins', sans-serif; /* Cambia la fuente del cuerpo */
+  }
+  
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
   margin: 0;
@@ -85,17 +89,21 @@
 .wrapper ul li{
   margin: 15px 0;
 }
-.wrapper ul li a{
-  color: none;
-  text-decoration: none;
-  font-size: 30px;
-  font-weight: 500;
-  padding: 5px 30px;
-  color: #fff;
-  position: relative;
-  line-height: 50px;
-  transition: all 0.3s ease;
-}
+
+
+  .wrapper ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px; /* Tamaño de fuente ajustado */
+    font-weight: 600; /* Peso de fuente ajustado */
+    padding: 10px 30px; /* Espaciado interno ajustado */
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+    display: block; /* Hacer el enlace ocupar todo el espacio del contenedor */
+    text-align: center; /* Centrar texto */
+    font-family: 'Poppins', sans-serif; /* Cambia la fuente */
+  }
 .wrapper ul li a:after{
   position: absolute;
   content: "";
