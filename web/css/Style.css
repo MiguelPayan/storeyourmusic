@@ -24,7 +24,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Cambia la fuente del cuerpo */
+    font-family: 'Poppins', sans-serif; 
   }
   
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -41,8 +41,6 @@ body {
   height: 100%;
   width: 100%;
   background: linear-gradient(-135deg, #c850c0, #4158d0);
-  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
   clip-path: circle(25px at calc(100% - 45px) 45px);
   transition: all 0.3s ease-in-out;
 }
@@ -50,8 +48,8 @@ body {
   clip-path: circle(75%);
 }
 .menu-btn{
-    position: fixed; /* Cambiado a posición fija */
-    z-index: 9999; /* Ajuste del z-index */
+    position: fixed; 
+    z-index: 9999; 
     right: 20px;
     top: 20px;
     height: 50px;
@@ -67,8 +65,8 @@ body {
   }
 
   .menu-btn img {
-    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
-    width: auto; /* Para mantener la proporción de la imagen */
+    height: 100%;
+    width: auto; 
   }
 
 #active:checked ~ .menu-btn{
@@ -94,15 +92,16 @@ body {
   .wrapper ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 20px; /* Tamaño de fuente ajustado */
-    font-weight: 600; /* Peso de fuente ajustado */
-    padding: 10px 30px; /* Espaciado interno ajustado */
+    font-size: 20px; 
+    font-weight: 600; 
+    padding: 10px 30px; 
     position: relative;
     line-height: 50px;
     transition: all 0.3s ease;
-    display: block; /* Hacer el enlace ocupar todo el espacio del contenedor */
-    text-align: center; /* Centrar texto */
-    font-family: 'Poppins', sans-serif; /* Cambia la fuente */
+    display: block; 
+    text-align: center; 
+    font-family: 'Poppins', sans-serif; 
+    white-space: nowrap;
   }
 .wrapper ul li a:after{
   position: absolute;
