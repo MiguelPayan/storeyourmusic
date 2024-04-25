@@ -46,23 +46,27 @@
   clip-path: circle(75%);
 }
 .menu-btn{
-  position: absolute;
-  z-index: 2;
-  right: 20px;
-  /* left: 20px; */
-  top: 20px;
-  height: 50px;
-  width: 50px;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  font-size: 20px;
-  color: #fff;
-  cursor: pointer;
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
-  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-  transition: all 0.3s ease-in-out;
-}
+    position: fixed; /* Cambiado a posición fija */
+    z-index: 9999; /* Ajuste del z-index */
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-btn img {
+    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+    width: auto; /* Para mantener la proporción de la imagen */
+  }
+
 #active:checked ~ .menu-btn{
   background: #fff;
   color: #4158d0;
