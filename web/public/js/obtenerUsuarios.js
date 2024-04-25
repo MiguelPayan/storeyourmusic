@@ -84,7 +84,7 @@ style.textContent = `
   
   
     .list button:hover {
-    background-color: #d32f2f; 
+    background: linear-gradient(-135deg, #c850c0, #4158d0);; 
   }
 `;
 
