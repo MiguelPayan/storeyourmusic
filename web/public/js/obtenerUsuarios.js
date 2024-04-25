@@ -40,11 +40,12 @@ style.textContent = `
     border-left: 2px solid #f50057;
     transition: 0.5s;
     cursor: pointer;
-    display: flex; /* New: Make li items flex containers */
-    align-items: center; /* New: Align items vertically */
+    display: flex;
+    align-items: center;
   }
   .list ul li:hover {
     left: 10px;
+    z-index: 1; /* Ajuste de z-index */
   }
   .list ul li span {
     position: relative;
@@ -72,6 +73,8 @@ style.textContent = `
   }
   
   .list button {
+    position: absolute;
+    right: 10px;
     background-color: #f44336; 
     color: white;
     border: none;
@@ -82,6 +85,7 @@ style.textContent = `
     border-radius: 4px;
     cursor: pointer;
     transition-duration: 0.4s;
+    z-index: 2;
   }
   .list .user-info {
     flex: 1; /* New: Take remaining space */
