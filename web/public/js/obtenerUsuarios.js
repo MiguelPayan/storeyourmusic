@@ -40,6 +40,8 @@ style.textContent = `
     border-left: 2px solid #f50057;
     transition: 0.5s;
     cursor: pointer;
+    display: flex; /* New: Make li items flex containers */
+    align-items: center; /* New: Align items vertically */
   }
   .list ul li:hover {
     left: 10px;
@@ -80,6 +82,11 @@ style.textContent = `
     border-radius: 4px;
     cursor: pointer;
     transition-duration: 0.4s;
+  }
+  .list .user-info {
+    flex: 1; /* New: Take remaining space */
+    display: flex; /* New: Make flex container */
+    align-items: center; /* New: Align items vertically */
   }
   
   
@@ -128,9 +135,15 @@ async function eliminar(boton){
 fetch('https://backstoreyourmusic.onrender.com/usuarios')
 .then((response) =>response.json())
 .then((users)=>{
-  let ptl = users.map(user => `<li><span>${user.email} ✉️ ${user.name}<button onclick="eliminar(this)">Eliminar</button></span></li>`);
-    ptl = ptl.join('');
-    container.innerHTML = `<div class="list"><ul>${ptl}</ul></div>`;
+  let ptl = users.map(user => `<li>
+  <div class="user-info">
+    <span>${user.email} ✉️ ${user.name}</span>
+  </div>
+  <button onclick="eliminar(this)">Eliminar</button>
+</li>`
+);
+ptl = ptl.join('');
+container.innerHTML = `<div class="list"><ul>${ptl}</ul></div>`;
     
 })
 .catch((error)=>{
