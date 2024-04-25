@@ -13,7 +13,15 @@ h1 {
   transform: translate(-50%, -50%);
   color: white;
 }
-    
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2em; /* Reducción del tamaño de fuente para dispositivos móviles */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta cualquier texto que se desborde del contenedor */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) si el texto se desborda */
+  }
+}
    .container {
   position: absolute;
   top: 50%;
