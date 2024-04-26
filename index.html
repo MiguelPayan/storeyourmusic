@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Página de Música</title>
     <link rel="stylesheet" href="/web/css/Style.css" />
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
   </head>
   <body>
     <header class="header">
-      <input type="checkbox" id="active">
-      <label for="active" class="menu-btn"><img src="/web/images/nav icon.png" alt="Icono de menú"><i class="fas fa-bars"></i></label>
-        <div class="wrapper">
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Canciones</a></li>
-            <li><a href="#" id="cerrar_sesion">Cerrar Sesion</a></li>
-            <li><a href="#" id="usuarios">Usuarios Registrados</a></li>
-            <li><a href="login.html" class="btn-login">Iniciar Sesión</a></li>
-          </ul>
-        </div>
+      <script>
+        import Menu from "../storeyourmusic/my-react-app/src/Menu.js"; 
+      
+        
+        ReactDOM.render(
+          React.createElement(Menu),
+          document.getElementById('menu-root')
+        );
+      </script>
+      <div id="menu-root"></div>
       <div class="header-content container">
         <div class="header-txt">
           <h1>Explora la Música</h1>
