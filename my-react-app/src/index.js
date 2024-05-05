@@ -8,6 +8,8 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
+  // En lugar de document.getElementById('root'), simplemente pasamos null
+  // ya que el elemento 'root' se maneja automáticamente en el archivo index.html en la carpeta public
   document.getElementById('root')
 );
 
