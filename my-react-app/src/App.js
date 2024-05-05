@@ -1,9 +1,14 @@
+import React from 'react';
+import Menu from './Menu'; // Importa el componente Menu
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      {/* Renderiza el componente Menu */}
+      <Menu />
+      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
