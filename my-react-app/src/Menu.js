@@ -6,7 +6,7 @@ function Menu() {
     <div>
       <input type="checkbox" id="active" />
       <label htmlFor="active" className="menu-btn">
-        <img src="/web/images/nav icon.png" alt="Icono de menú" />
+        <img src="../../web/images/nav icon-png" alt="Icono de menú" />
         <i className="fas fa-bars"></i>
       </label>
       <div className="wrapper">
