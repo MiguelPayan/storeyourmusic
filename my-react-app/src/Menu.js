@@ -1,12 +1,12 @@
 import React from 'react';
-import '../web/css/Style.css';
+import '../../web/css/Style.css';
 
 function Menu() {
   return (
     <div>
       <input type="checkbox" id="active" />
       <label htmlFor="active" className="menu-btn">
-        <img src="../../web/images/nav icon-png" alt="Icono de menú" />
+        <img src="my-react-app\web\images\nav icon.png" alt="Icono de menú" />
         <i className="fas fa-bars"></i>
       </label>
       <div className="wrapper">
