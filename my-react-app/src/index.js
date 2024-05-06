@@ -1,16 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'my-react-app\src\styles\css\Style.css';
-import App from 'my-react-app\src\App.js';
-import Menu from 'my-react-app\src\Menu.js'; // Asegúrate de proporcionar la ruta correcta al componente Menu
+import App from './App';
+import Menu from 'Menu.js'; // Asegúrate de poner la ruta correcta al archivo del menú
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Menu /> {/* Renderiza el componente Menu */}
     <App />
   </React.StrictMode>,
-  document.getElementById('root') // Renderiza en el contenedor con el ID "root" en index.html
+  document.getElementById('root')
 );
 
+ReactDOM.render(
+  <React.StrictMode>
+    <Menu />
+  </React.StrictMode>,
+  document.getElementById('menu-container')
+);
+
+// Si deseas medir el rendimiento en tu aplicación, puedes dejar esta parte.
 reportWebVitals();
