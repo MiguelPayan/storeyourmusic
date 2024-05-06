@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import Menu from './ruta/a/menu'; // Asegúrate de proporcionar la ruta correcta al componente Menu
+import 'my-react-app\src\styles\css\Style.css';
+import App from 'my-react-app\src\App.js';
+import Menu from 'my-react-app\src\Menu.js'; // Asegúrate de proporcionar la ruta correcta al componente Menu
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
