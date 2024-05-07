@@ -40,9 +40,13 @@ style.textContent = `
     border-left: 2px solid #f50057;
     transition: 0.5s;
     cursor: pointer;
+    display: flex; /* New: Make li items flex containers */
+    align-items: center; /* New: Align items vertically */
   }
+
   .list ul li:hover {
     left: 10px;
+    z-index: 1;
   }
   .list ul li span {
     position: relative;
@@ -60,7 +64,7 @@ style.textContent = `
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #f50057;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
     transform: scaleX(0);
     transform-origin: left;
     transition: 0.5s;
@@ -80,11 +84,17 @@ style.textContent = `
     border-radius: 4px;
     cursor: pointer;
     transition-duration: 0.4s;
+    z-index: 2;
+  }
+  .list .user-info {
+    flex: 1; /* New: Take remaining space */
+    display: flex; /* New: Make flex container */
+    align-items: center; /* New: Align items vertically */
   }
   
   
     .list button:hover {
-    background-color: #d32f2f; 
+    background: #ff00ff; 
   }
 `;
 
@@ -128,9 +138,15 @@ async function eliminar(boton){
 fetch('https://backstoreyourmusic.onrender.com/usuarios')
 .then((response) =>response.json())
 .then((users)=>{
-  let ptl = users.map(user => `<li><span>${user.email} ✉️ ${user.name}</span> <button onclick="eliminar(this)">Eliminar</button></li>`);
-    ptl = ptl.join('');
-    container.innerHTML = `<div class="list"><ul>${ptl}</ul></div>`;
+  let ptl = users.map(user => `<li>
+  <div class="user-info">
+    <span>${user.email} ✉️ ${user.name}</span>
+  </div>
+  <button onclick="eliminar(this)">Eliminar</button>
+</li>`
+);
+ptl = ptl.join('');
+container.innerHTML = `<div class="list"><ul>${ptl}</ul></div>`;
     
 })
 .catch((error)=>{
