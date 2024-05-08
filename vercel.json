@@ -1,7 +1,4 @@
 {
-  "projects": {
-    "default": "my-react-app"
-  },
   "version": 2,
   "builds": [
     {
