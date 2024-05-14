@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: black;
+}
+
+#cabecera{
+    color: white;
+    padding-left: 20px;
+    font-family: "Jaro", sans-serif;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+#contenedor-primario{
+    font-size: 18px;
+    font-family: "Jaro", sans-serif;
+    color: azure;
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+}
+
+#contenedor-datos{
+    padding: 10px;
+    height: 500px;
+    width: 500px;
+    margin: 10px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.dato{
+    display: flex;
+    flex-direction: row;
+}
+
+.valor{
+    padding-left: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+#contenedor-canciones{
+    height: 500px;
+    width: 500px;
+    margin: 10px;
+    border: 1px solid rgb(255, 255, 255);
+}

@@ -19,6 +19,9 @@ function parseJwt (token) {
 if(credenciales == null){
     btn_cerrar_sesion = document.getElementById("cerrar_sesion");
     btn_cerrar_sesion.style.display = "none"
+
+    miPerfil = document.getElementById("mi_perfil");
+    miPerfil.style.display = "none"
 }else{
     btn_cerrar_sesion = document.getElementById("cerrar_sesion");
     btn_cerrar_sesion.style.display = "inline-block";
