@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 24px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.contact-link {
+    color: #007bff;
+}
+
+.registro-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.registro-link:hover {
+    background-color: #0056b3;
+}
