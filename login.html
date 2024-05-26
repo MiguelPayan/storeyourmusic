@@ -1,70 +1,128 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="web/css/login.css" />
-  </head>
-  <body>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="login.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | StoreYourMusic</title>
+  <link rel="stylesheet" href="web/css/login.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('/web/images/bg.png'); /* Ruta de la imagen de fondo */
+      background-size: cover;
+      background-position: center;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    form {
+      text-align: center;
+    }
+    .input-info {
+      margin-bottom: 20px;
+    }
+    .input-info i {
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 12px;
+      color: #888;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: calc(100% - 40px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .log-sign button,
+    .log-sign a {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #fff;
+      cursor: pointer;
+    }
+    .log-sign .login {
+      background-color: #007bff;
+    }
+    .log-sign .signup {
+      background-color: #28a745;
+    }
+    .social-media {
+      margin-top: 20px;
+    }
+    .forget-password {
+      margin-top: 30px; /* Aumentado el margen superior */
+      text-align: center; /* Alineado el texto al centro */
+    }
+    .forget-password a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    /* Estilos personalizados */
+    .login,
+    .signup {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    .login {
+      background-color: #007bff;
+      color: #fff;
+    }
+    .signup {
+      background-color: #28a745;
+      color: #fff;
+    }
+    .login:hover,
+    .signup:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="login.js"></script>
+  <div class="container">
     <h1>Bienvenido a StoreYourMusic</h1>
+   
 
-    <div id="AppendHere"></div>
-    <!--start login form-->
-    <form id="loginform" action="#">
-      <!--action="the site link"-->
-      <!--start header-->
-      <h1>LOG IN</h1>
-      <link rel="stylesheet" href="login.css" />
-      <p><a href="index.html" target="_blank"> storeyourmusic.store</a></p>
-      <!--site link-->
-      <!--end site-->
-
-      <div class="input-info">
-        <!--the input div containe the information of the user-->
-        <i class="fa fa-user"></i>
-        <!--user name-->
-        <input type="text" placeholder="User-Name" />
-        <i class="fa fa-envelope"></i>
-        <!--user email-->
-        <input
-          type="email"
-          placeholder="E-mail"
-          required
-          autocomplete="off"
-          validate
-        />
-        <i class="fa fa-lock"></i>
-        <!--yser password-->
-        <input type="password" placeholder="Password" />
-        <!--the checkbox to make the browser remember the user-->
-        <input type="checkbox" />
-        <span>Remember Me</span><br />
-      </div>
-
-      <div class="log-sign">
-        <!--the login button and the sign up button>[to the sign up page]-->
-        <button class="login" form="loginform">
-          <i class="fa fa-mail-forward (alias)"></i> Log In</button
-        ><!--log in-->
-
-        <a href="#" target="_blank"
-          ><!--the link to the sign up page-->
-          <button class="signup" form="signupform">
-            <i class="fa fa-plus"></i> Sign Up
-          </button>
-        </a>
-      </div>
-      <!--end of the log-sign-->
-
-      <div id="buttonDiv" class="social-media">
-        <!--sign up by fb and tw-->
+    
+         <!-- Botón de inicio de sesión de Google -->
+      <div class="social-media">
+        <div id="buttonDiv" class="social-media">
+       >
+        </div>
       </div>
       <p class="forget-password">
-        If you forget your password please <a href="#">click here</a>
+        ¿No tienes cuenta? <a href="https://accounts.google.com/v3/signin/identifier?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&ec=asw-gmail-globalnav-signin&ddm=0">Haz clic aquí</a>
       </p>
     </form>
-    <!--End login form-->
-  </body>
+  </div>
+</body>
 </html>
+
+
