@@ -40,6 +40,14 @@
         <audio id="mi_audio" src="../../images/audio.mp3"></audio>
         <button class="play" onclick="play()">Play</button>
         <button class="pause" onclick="pause()">Pause</button>
+        <form
+          action="http://localhost:3000/cancion/single"
+          enctype="multipart/form-data"
+          method="post"
+        >
+          <input type="file" name="cancion" id="cancion" />
+          <input type="submit" value="Subir cancion" />
+        </form>
       </div>
     </div>
     <script src="/web/public/js/miperfil.js"></script>
