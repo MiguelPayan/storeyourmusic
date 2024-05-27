@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Perfil</title>
     <link rel="stylesheet" href="/web/css/miperfil.css" />
-  </head>
-  <body>
+</head>
+<body>
+    <button id="boton-regreso" onclick="window.location.href='https://www.storeyourmusic.store/'">Regresar</button>
     <div id="cabecera">
-      <div>
-        <h1>Perfil de:</h1>
-        <h1 id="nombre-header"></h1>
-      </div>
+        <div>
+            <h1>Perfil de:</h1>
+            <h1 id="nombre-header"></h1>
+        </div>
     </div>
     <div id="contenedor-primario">
-      <div id="contenedor-datos">
-        <div class="dato">
-          <p>Nombre:</p>
-          <p class="valor"></p>
+        <div id="contenedor-datos">
+            <div class="dato">
+                <p>Nombre:</p>
+                <p class="valor"></p>
+            </div>
+            <div class="dato">
+                <p>Correo Electrónico:</p>
+                <p class="valor"></p>
+            </div>
+            <div class="dato">
+                <p>Nombre Artístico:</p>
+                <input type="text" id="nombre-artistico" placeholder="Ingrese su nombre artístico">
+            </div>
+            <div class="dato">
+                <p>Edad:</p>
+                <input type="number" id="edad" placeholder="Ingrese su edad">
+            </div>
+            <div id="contacto">
+                <p>Facebook</p>
+                <p>Youtube</p>
+                <p>Spotify</p>
+            </div>
         </div>
-
-        <div class="dato">
-          <p>Correo Electronico:</p>
-          <p class="valor"></p>
+        <div id="contenedor-canciones">
+            <audio id="mi_audio" src="../../images/audio.mp3"></audio>
+            <button class="play" onclick="play()">Play</button>
+            <button class="pause" onclick="pause()">Pause</button>
+            <form id="subir-cancion-form" action="https://backstoreyourmusic.onrender.com/cancion/single" enctype="multipart/form-data" method="post">
+                <input type="text" name="nombre" placeholder="Nombre de la canción">
+                <input type="text" name="duracion" placeholder="Duración de la canción">
+                <input type="text" name="genero" placeholder="Género musical">
+                <input type="text" name="artista" placeholder="Nombre del artista">
+                <input type="file" name="cancion" id="cancion" />
+                <input type="submit" value="Subir canción" />
+            </form>
         </div>
-        <div class="dato">
-          <p>Nombre Artistico:</p>
-        </div>
-        <div class="dato">
-          <p>Edad:</p>
-        </div>
-        <div id="contacto">
-          <p>Facebook</p>
-          <p>Youtube</p>
-          <p>Spotify</p>
-        </div>
-      </div>
-      <div id="contenedor-canciones">
-        <audio id="mi_audio" src="../../images/audio.mp3"></audio>
-        <button class="play" onclick="play()">Play</button>
-        <button class="pause" onclick="pause()">Pause</button>
-        <form
-          action="https://backstoreyourmusic.onrender.com/cancion/single"
-          enctype="multipart/form-data"
-          method="post"
-        >
-          <input type="file" name="cancion" id="cancion" />
-          <input type="submit" value="Subir cancion" />
-        </form>
-      </div>
     </div>
     <script src="/web/public/js/miperfil.js"></script>
-  </body>
+</body>
 </html>

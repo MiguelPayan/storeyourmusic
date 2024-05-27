@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Canciones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        #canciones {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cancion {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .cancion:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cancion span {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .cancion .play-button {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cancion .play-button:hover {
+            background-color: #0056b3;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Canciones</h1>
+    <div id="canciones"></div>
+
+    <audio id="reproductor" controls></audio>
+
+    <script>
+        // Función para cargar la lista de canciones
+        async function cargarCanciones() {
+            const url = 'https://backstoreyourmusic.onrender.com/cancion/single';
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                const cancionesDiv = document.getElementById('canciones');
+
+                data.forEach(cancion => {
+                    const cancionDiv = document.createElement('div');
+                    cancionDiv.classList.add('cancion');
+
+                    const nombreCancion = document.createElement('span');
+                    nombreCancion.textContent = cancion.nombre;
+
+                    const duracionCancion = document.createElement('span');
+                    duracionCancion.textContent = `Duración: ${cancion.duracion}`;
+
+                    const playButton = document.createElement('button');
+                    playButton.innerHTML = '<i class="fas fa-play"></i> Reproducir';
+                    playButton.classList.add('play-button');
+                    playButton.onclick = () => reproducirCancion(cancion.url);
+
+                    cancionDiv.appendChild(nombreCancion);
+                    cancionDiv.appendChild(duracionCancion);
+                    cancionDiv.appendChild(playButton);
+
+                    cancionesDiv.appendChild(cancionDiv);
+                });
+            } catch (error) {
+                console.error('Error al cargar las canciones:', error);
+            }
+        }
+
+        // Función para reproducir una canción
+        function reproducirCancion(url) {
+            const reproductor = document.getElementById('reproductor');
+            reproductor.src = url;
+            reproductor.play();
+        }
+
+        // Cargar las canciones al cargar la página
+        window.onload = cargarCanciones;
+    </script>
+</body>
+</html>
