@@ -1,6 +1,6 @@
 async function obtenerCanciones() {
     try {
-        let response = await fetch('https://backstoreyourmusic.onrender.com//songs', {
+        let response = await fetch('https://backstoreyourmusic.onrender.com/songs', {
             method: 'GET'
         });
 
