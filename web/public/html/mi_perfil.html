@@ -49,17 +49,14 @@
           </div>
       </div>
       <div id="contenedor-canciones">
-          <form id="subir-cancion-form" action="https://backstoreyourmusic.onrender.com/cancion/single" enctype="multipart/form-data" method="post">
-              <input type="text" name="nombre" placeholder="Nombre de la canción">
-              <input type="text" name="duracion" placeholder="Duración de la canción">
-              <input type="text" name="genero" placeholder="Género musical">
-              <input type="text" name="artista" placeholder="Nombre del artista">
-              <input type="file" name="cancion" id="cancion" />
-              <input type="submit" value="Subir canción" />
-          </form>
+        <form id="subir-cancion-form" enctype="multipart/form-data" method="post">
+          <input type="file" name="cancion" id="cancion" />
+          <input type="submit" value="Subir canción" />
+      </form>
       </div>
   </div>
   <script src="/web/public/js/miperfil.js"></script>
+  <script src="/web/public/js/subir.js"></script>
     <script src="/index.js"></script>
     <style>
       
