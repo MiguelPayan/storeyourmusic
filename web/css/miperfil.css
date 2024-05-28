@@ -1,52 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-body{
-    background-color: black;
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Cambiar el color del texto para que sea legible sobre la imagen de fondo */
 }
 
-#cabecera{
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos para el contenedor principal */
+#contenedor-primario {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+/* Estilos para el contenedor de datos */
+#contenedor-datos {
+    flex: 1;
+    margin-right: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 10px; /* Espacio interno para separar los datos del borde */
+}
+
+.dato {
+    margin-bottom: 10px;
+}
+
+.dato p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Estilos para el contenedor de canciones */
+#contenedor-canciones {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 10px; /* Espacio interno para separar las canciones del borde */
+}
+
+/* Estilos para el formulario de subir canción */
+#subir-cancion-form {
+    margin-top: 20px;
+    background-color: #fff; /* Fondo sólido */
+    padding: 20px; /* Espacio interno para separar el contenido del borde */
+}
+
+#subir-cancion-form input[type="file"],
+#subir-cancion-form input[type="text"],
+#subir-cancion-form input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#subir-cancion-form input[type="submit"] {
+    background-color: #007bff;
     color: white;
-    padding-left: 20px;
-    font-family: "Jaro", sans-serif;
-    border: 3px solid rgb(255, 255, 255);
-    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#contenedor-primario{
-    font-size: 18px;
-    font-family: "Jaro", sans-serif;
-    color: azure;
-    display: flex;
-    flex-direction: row;
-    padding: 25px;
+#subir-cancion-form input[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
-#contenedor-datos{
-    padding: 10px;
-    height: 500px;
-    width: 500px;
-    margin: 10px;
-    border: 1px solid rgb(255, 255, 255);
+/* Estilos para el encabezado */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #fff; /* Cambiar el color del texto para que sea legible sobre la imagen de fondo */
+    padding: 20px; /* Espacio interno para separar el título del borde */
+    margin: 0; /* Eliminar el margen por defecto */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
 }
 
-.dato{
-    display: flex;
-    flex-direction: row;
+/* Estilos para el botón de regreso */
+#boton-regreso {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999;
 }
 
-.valor{
-    padding-left: 15px;
-    font-family: "Montserrat", sans-serif;
+#boton-regreso:hover {
+    background-color: #0056b3;
 }
 
-#contenedor-canciones{
-    height: 500px;
-    width: 500px;
-    margin: 10px;
-    border: 1px solid rgb(255, 255, 255);
-}
-
-#mi_audio{
-    height: 50px;
-    width: 50px;
+/* Estilos para la imagen de fondo */
+body {
+    background-image: url('/web/images/montaña.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }

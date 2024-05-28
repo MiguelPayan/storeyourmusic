@@ -26,46 +26,40 @@
       <div>
         <h1>Perfil de:</h1>
         <h1 id="nombre-header"></h1>
-      </div>
     </div>
-    <div id="contenedor-primario">
-      <div id="contenedor-datos">
+</div>
+<div id="contenedor-primario">
+    <div id="contenedor-datos">
         <div class="dato">
-          <p>Nombre:</p>
-          <p class="valor"></p>
-        </div>
-
-        <div class="dato">
-          <p>Correo Electronico:</p>
-          <p class="valor"></p>
+            <p>Nombre:</p>
+            <p class="valor"></p>
         </div>
         <div class="dato">
-          <p>Nombre Artistico:</p>
+            <p>Correo Electrónico:</p>
+            <p class="valor"></p>
         </div>
         <div class="dato">
-          <p>Edad:</p>
+            <p>Nombre Artístico:</p>
+            <input type="text" id="nombre-artistico" placeholder="Ingrese su nombre artístico">
+        </div>
+        <div class="dato">
         </div>
         <div id="contacto">
-          <p>Facebook</p>
-          <p>Youtube</p>
-          <p>Spotify</p>
-        </div>
+      
+          </div>
       </div>
       <div id="contenedor-canciones">
-        <audio id="mi_audio" src="../../images/audio.mp3"></audio>
-        <button class="play" onclick="play()">Play</button>
-        <button class="pause" onclick="pause()">Pause</button>
-        <form
-          action="https://backstoreyourmusic.onrender.com/cancion/single"
-          enctype="multipart/form-data"
-          method="post"
-        >
-          <input type="file" name="cancion" id="cancion" />
-          <input type="submit" value="Subir cancion" />
-        </form>
+          <form id="subir-cancion-form" action="https://backstoreyourmusic.onrender.com/cancion/single" enctype="multipart/form-data" method="post">
+              <input type="text" name="nombre" placeholder="Nombre de la canción">
+              <input type="text" name="duracion" placeholder="Duración de la canción">
+              <input type="text" name="genero" placeholder="Género musical">
+              <input type="text" name="artista" placeholder="Nombre del artista">
+              <input type="file" name="cancion" id="cancion" />
+              <input type="submit" value="Subir canción" />
+          </form>
       </div>
-    </div>
-    <script src="/web/public/js/miperfil.js"></script>
+  </div>
+  <script src="/web/public/js/miperfil.js"></script>
     <script src="/index.js"></script>
     <style>
       
