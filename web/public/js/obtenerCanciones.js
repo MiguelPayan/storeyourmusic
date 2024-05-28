@@ -1,6 +1,6 @@
 async function obtenerCanciones() {
     try {
-        let response = await fetch('https://backstoreyourmusic.onrender.com/mostrarcanciones', {
+        let response = await fetch('https://backstoreyourmusic.onrender.com/songs', {
             method: 'GET'
         });
 
@@ -23,7 +23,7 @@ async function obtenerCanciones() {
             rola.onclick = () => {
                 const audioGlobal = document.getElementById("audio-global");
                 const audioSource = document.getElementById("audio-source");
-                audioSource.src = `https://backstoreyourmusic.onrender.com/canciones/${cancion}`;
+                audioSource.src = `https://storeyourmusic01.blob.core.windows.net/cloudc/${cancion}`;
                 audioGlobal.load();
                 audioGlobal.play();
             };
