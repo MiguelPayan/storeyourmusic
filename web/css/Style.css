@@ -53,7 +53,7 @@ body {
     top: 0;
     right: 0; /* Ajusta el menú desplegable arriba a la derecha */
     height: 100%;
-    width: auto; /* Ajusta el ancho automáticamente */
+    width: 100%; /* Ajusta el ancho al 100% */
     background: linear-gradient(-135deg, #c850c0, #4158d0);
     clip-path: circle(25px at calc(100% - 45px) 45px);
     transition: all 0.3s ease-in-out;
@@ -85,14 +85,24 @@ body {
     width: auto;
 }
 
+.menu-btn i {
+    display: none;
+}
+
 #active:checked~.menu-btn {
     background: #fff;
     color: #4158d0;
 }
 
-#active:checked~.menu-btn i:before {
-    content: "\f00d";
+#active:checked ~ .menu-btn i:before {
+    display: none;
 }
+
+#active:checked ~ .menu-btn::after {
+    content: "\f00d";
+    font-family: "FontAwesome";
+}
+
 
 .wrapper ul {
     position: absolute;
