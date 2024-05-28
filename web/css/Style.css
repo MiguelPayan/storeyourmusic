@@ -48,26 +48,27 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+
 .wrapper {
     position: fixed;
-    top: 0;
-    right: 0; /* Ajusta el menú desplegable arriba a la derecha */
-    height: 100%;
-    width: 100%; /* Ajusta el ancho al 100% */
+    top: 20px; /* Posiciona el menú en la parte superior */
+    right: 20px; /* Posiciona el menú en la parte derecha */
+    z-index: 9999; /* Asegura que esté por encima de todo */
+    height: auto; /* No necesitas una altura fija */
+    width: auto; /* No necesitas un ancho fijo */
     background: linear-gradient(-135deg, #c850c0, #4158d0);
     clip-path: circle(25px at calc(100% - 45px) 45px);
     transition: all 0.3s ease-in-out;
 }
+
 
 #active:checked~.wrapper {
     clip-path: circle(75%);
 }
 
 .menu-btn {
-    position: fixed;
+    position: relative;
     z-index: 9999;
-    right: 20px;
-    top: 20px;
     height: 60px;
     width: 60px;
     text-align: center;
@@ -80,9 +81,12 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+/* Ajusta la posición del icono del menú */
 .menu-btn img {
-    height: 100%;
-    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .menu-btn i {
@@ -105,10 +109,6 @@ body {
 
 
 .wrapper ul {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     list-style: none;
     text-align: center;
 }
