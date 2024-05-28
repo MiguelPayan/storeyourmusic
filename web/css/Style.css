@@ -12,15 +12,27 @@
 
 .header {
     background-image: url(/web/images/t4.png);
-    background-position: center bottom;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 70vh;
+    min-height: 100vh; /* Ajusta la altura mínima al 100% de la pantalla */
     display: flex;
     align-items: center;
     padding: 0 20px;
-    height: 100%;
-    width: auto;
+}
+
+.header-content {
+    width: 100%; /* Ajusta el ancho al 100% */
+    padding: 100px 20px; /* Ajusta el relleno */
+    text-align: center;
+}
+
+.header-txt h1 {
+    font-size: 5vw; /* Tamaño de fuente responsive */
+}
+
+.header-txt p {
+    font-size: 3vw; /* Tamaño de fuente responsive */
 }
 
 body {
@@ -36,17 +48,59 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.wrapper ul {
+.wrapper {
     position: fixed;
+    top: 0;
+    right: 0; /* Ajusta el menú desplegable arriba a la derecha */
+    height: 100%;
+    width: auto; /* Ajusta el ancho automáticamente */
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+}
+
+#active:checked~.wrapper {
+    clip-path: circle(75%);
+}
+
+.menu-btn {
+    position: fixed;
+    z-index: 9999;
+    right: 20px;
+    top: 20px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-btn img {
+    height: 100%;
+    width: auto;
+}
+
+#active:checked~.menu-btn {
+    background: #fff;
+    color: #4158d0;
+}
+
+#active:checked~.menu-btn i:before {
+    content: "\f00d";
+}
+
+.wrapper ul {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
     text-align: center;
-    background-color: black; /* Añadir un fondo oscuro al menú para mayor contraste */
-    padding: 20px; /* Agregar un espacio interno al menú */
-    border-radius: 10px; /* Redondear las esquinas del menú */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agregar sombra al menú para resaltar */
 }
 
 .wrapper ul li {
@@ -93,101 +147,52 @@ input[type="checkbox"] {
     display: none;
 }
 
-.menu-btn {
-    position: fixed;
-    z-index: 9999;
-    right: 20px;
-    top: 20px;
-    height: 60px;
-    width: 60px;
+.btn-1 {
+    display: inline-block;
+    padding: 12px 45px;
+    border: 1px solid white;
+    color: azure;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-1:hover {
+    color: black;
+    background-color: aliceblue;
+}
+
+.btn-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.general {
+    padding: 50px 0;
     text-align: center;
-    line-height: 60px;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
-    transition: all 0.3s ease-in-out;
 }
 
-.menu-btn img {
-    height: 100%;
-    width: auto;
+.general-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
 }
 
-#active:checked~.menu-btn {
-    background: #fff;
-    color: #4158d0;
+.general-1,
+.general-2,
+.general-3,
+.general-4,
+.general-5,
+.general-6 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    padding: 170px 55px;
 }
-
-#active:checked~.menu-btn i:before {
-    content: "\f00d";
-}
-
-@media(max-width:991px) {
-    .menu {
-        padding: 30px;
-    }
-
-    .menu label {
-        display: initial;
-    }
-
-    .menu .navbar {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: transparent;
-        display: none;
-        z-index: 9998; /* Asegurar que el menú desplegable esté detrás del menú principal */
-    }
-
-    .menu .navbar ul li {
-        width: 100%;
-    }
-
-    #menu:checked~.navbar {
-        display: initial;
-    }
-
-    .header {
-        min-height: 0vh;
-    }
-
-    .header-content {
-        padding: 100px 30px;
-    }
-
-    .header-txt h1 {
-        font-size: 50px;
-    }
-
-    .header-txt p {
-        padding: 0;
-    }
-
-    .general {
-        padding: 30px 20px;
-    }
-
-    .general-content {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    .general-1,
-    .general-2,
-    .general-3,
-    .general-4,
-    .general-5,
-    .general-6 {
-        height: 350px;
-        padding: 100px 100px;
-    }
-}
-
 
 .general-1 {
     background-image: url(/web/images/r1.png);
