@@ -391,6 +391,7 @@ h2 {
             background-color: #333;
         }
 
+        @media(max-width:991px) {
             .menu {
                 padding: 30px;
             }
@@ -451,4 +452,4 @@ h2 {
                 height: 350px;
                 padding: 100px 100px;
             }
-    
+        }
