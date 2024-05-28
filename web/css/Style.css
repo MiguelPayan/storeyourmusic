@@ -160,7 +160,6 @@ body {
   }
   
   .imagenPerfil {
-    padding-right: 10px;
     width: 30px; /* Ajusta el tamaño de la imagen */
     height: 30px; /* Ajusta el tamaño de la imagen */
     border-radius: 50%;
