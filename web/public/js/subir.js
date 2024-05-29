@@ -39,7 +39,7 @@ document.getElementById('subir-cancion-form').addEventListener('submit', async f
     const formData = new FormData();
     formData.append('file', file);
 
-    //Subir canion a azure
+    //Subir cancion a azure
      try {
         const response = await fetch('https://backstoreyourmusic.onrender.com/upload', {
             method: 'POST',
@@ -50,7 +50,6 @@ document.getElementById('subir-cancion-form').addEventListener('submit', async f
 
         if (response.ok) {
             alert(responseText);
-            window.location.reload(); // Recargar la página después de la subida exitosa
         } else {
             alert('Error al subir el archivo: ' + responseText);
         }
