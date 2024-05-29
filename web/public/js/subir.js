@@ -49,13 +49,13 @@ document.getElementById('subir-cancion-form').addEventListener('submit', async f
         const responseText = await response.text();
 
         if (response.ok) {
-            alert(responseText);
+            alert("Subida a Azure");
         } else {
-            alert('Error al subir el archivo: ' + responseText);
+            alert('Error al subir a Azure: ' + responseText);
         }
     } catch (error) {
         console.error('Error al subir el archivo:', error);
-        alert('Error al subir el archivo');
+        alert('Error al mandar cancion al back');
     }
 
     let titulo = await file.name;
@@ -79,10 +79,10 @@ document.getElementById('subir-cancion-form').addEventListener('submit', async f
         const responseText = await response.text();
 
         if (response.ok) {
-            alert(responseText);
+            alert("Subida a SQL");
             window.location.reload(); // Recargar la página después de la subida exitosa
         } else {
-            alert('Error al subir el archivo: ' + responseText);
+            alert('Error al subir el archivo a SQL: ' + responseText);
         }
     }catch(error){
         console.log(error);
