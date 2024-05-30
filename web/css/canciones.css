@@ -8,12 +8,101 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('/web/images/bg5.png');
-    background-size: cover;
-    background-position: center;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+#contenedor-canciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.contenedor-unacancion {
+    background: linear-gradient(135deg, #c850c0, #4158d0);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+}
+
+.contenedor-unacancion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nombre-cancion {
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.control-buttons button {
+    background: linear-gradient(135deg, #4158d0, #c850c0);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.control-buttons button:hover {
+    background: linear-gradient(135deg, #3549a2, #c850c0);
+    transform: scale(1.1);
+}
+
+.time-display {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#global-player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#global-player audio {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+    .contenedor-unacancion {
+        width: 90%;
+    }
+
+    .control-buttons button {
+        padding: 8px 10px;
+    }
+
+    #global-player audio {
+        width: 100%;
+    }
 }
 
 .wrapper {
@@ -143,14 +232,4 @@ input[type="checkbox"] {
     height: 30px; /* Ajusta el tamaño de la imagen */
     border-radius: 50%;
     object-fit: cover;
-}
-
-#global-player {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-#global-player audio {
-    width: 100%;
 }
