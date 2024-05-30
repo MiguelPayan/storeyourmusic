@@ -311,40 +311,6 @@ h2 {
     background-size: 100% 100%;
 }
 
-.testi {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: left;
-    margin-top: 35px;
-}
-
-.testi-left,
-.testi-right {
-    width: 100%;
-    padding-right: 25px;
-    margin-bottom: 20px; /* Añade espacio entre las secciones */
-}
-
-.testi-txt {
-    margin-bottom: 25px;
-}
-
-.testi-txt img {
-    width: 50px;
-    margin-bottom: 15px;
-}
-
-.testi-txt h3 {
-    font-size: 2vw; /* Tamaño de fuente responsive */
-    color: azure;
-}
-
-.testi-txt p {
-    color: azure;
-    font-size: 1.5vw; /* Tamaño de fuente responsive */
-}
-
 .footer {
     padding: 100px 0 0 0;
     text-align: center;
