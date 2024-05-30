@@ -297,7 +297,7 @@ h2 {
 
 .circle-1 h3 {
     color: azure;
-    font-size: 1.3vw; /* Tamaño de fuente responsive */
+    font-size: 0.8vw; /* Tamaño de fuente responsive */
     margin: 0; /* Elimina el margen para centrar el texto */
 }
 
