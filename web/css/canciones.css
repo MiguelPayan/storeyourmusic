@@ -85,11 +85,12 @@ h1 {
 #global-player {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 70%;
+  background: none; /* Elimina el fondo */
 }
 
 #global-player audio {
-  width: 100%;
+  width: 70%;
 }
 
 @media (max-width: 768px) {
@@ -102,7 +103,7 @@ h1 {
     }
 
     #global-player audio {
-        width: 100%;
+        width: 90%;
     }
 }
 
