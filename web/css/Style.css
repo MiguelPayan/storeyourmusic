@@ -282,20 +282,29 @@ h2 {
     align-items: center;
     text-align: center;
     margin: 10px; /* Añade espacio entre los elementos */
+    white-space: nowrap; /* Evita que el texto se desborde */
+    overflow: hidden; /* Oculta el texto que se desborda */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) cuando el texto se desborda */
 }
 
 .circle-1 {
-    height: 80px;
-    width: 80px;
-    padding-top: 25px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding-top: 20px; /* Reducir el espacio superior para centrar mejor el texto */
 }
 
 .circle-1 h3 {
-    font-size: 4vw; /* Tamaño de fuente responsive */
+    color: azure;
+    font-size: 2vw; /* Tamaño de fuente responsive */
+    margin: 0; /* Elimina el margen para centrar el texto */
 }
 
 .circle-txt p {
-    font-size: 3.5vw; /* Tamaño de fuente responsive */
+    color: azure;
+    margin-top: 25px;
+    font-size: 1.5vw; /* Tamaño de fuente responsive */
 }
 
 .info-2 {
@@ -461,13 +470,13 @@ h2 {
         width: 80px;
         padding-top: 25px;
     }
-
+    
     .circle-1 h3 {
-        font-size: 4vw;
+        font-size: 4vw; /* Tamaño de fuente responsive */
     }
-
+    
     .circle-txt p {
-        font-size: 3.5vw;
+        font-size: 3.5vw; /* Tamaño de fuente responsive */
     }
 
     .footer-txt p {
