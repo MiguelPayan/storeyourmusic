@@ -368,6 +368,38 @@ h2 {
     background-color: #333;
 }
 
+@media(min-width: 992px) {
+    .general {
+        padding: 50px 20px; /* Ajusta el padding */
+        margin-bottom: 50px; /* Añade espacio al final */
+    }
+
+    .general-content {
+        margin-top: 50px; /* Añade espacio arriba */
+    }
+
+    .general-1,
+    .general-2,
+    .general-3,
+    .general-4,
+    .general-5,
+    .general-6 {
+        padding: 170px 55px; /* Ajusta el padding */
+        margin-bottom: 20px; /* Añade espacio al final */
+    }
+
+    h2 {
+        font-size: 3vw; /* Tamaño de fuente responsive */
+    }
+
+    .txt h3 {
+        font-size: 1.5vw; /* Tamaño de fuente responsive */
+    }
+
+    .txt p {
+        font-size: 1vw; /* Tamaño de fuente responsive */
+    }
+    
 @media(max-width: 991px) {
     .menu {
         padding: 30px;
