@@ -1,115 +1,203 @@
-/* Estilos generales */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff; /* Cambiar el color del texto para que sea legible sobre la imagen de fondo */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-image: url('/web/images/montaña.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
 }
 
-/* Estilos para el contenedor principal */
+#active:checked ~ .wrapper {
+  clip-path: circle(75%);
+}
+
+.menu-btn {
+  position: fixed;
+  z-index: 9999;
+  right: 20px;
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn img {
+  height: 100%;
+  width: auto;
+}
+
+#active:checked ~ .menu-btn {
+  background: #fff;
+  color: #4158d0;
+}
+
+#active:checked ~ .menu-btn i:before {
+  content: "\f00d";
+}
+
+.wrapper ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+
+.wrapper ul li {
+  margin: 15px 0;
+}
+
+.wrapper ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 30px;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+  display: block;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
+}
+
+.wrapper ul li a:after {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.wrapper ul li a:hover:after {
+  transform: scaleY(1);
+}
+
+.wrapper ul li a:hover {
+  color: #4158d0;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+#cabecera {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+}
+
+#cabecera h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
 #contenedor-primario {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-/* Estilos para el contenedor de datos */
-#contenedor-datos {
-    flex: 1;
-    margin-right: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    padding: 10px; /* Espacio interno para separar los datos del borde */
+@media (min-width: 768px) {
+  #contenedor-primario {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+#contenedor-datos, #contenedor-canciones {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (min-width: 768px) {
+  #contenedor-datos, #contenedor-canciones {
+    width: 45%;
+  }
 }
 
 .dato {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .dato p {
-    margin: 5px 0;
-    font-size: 16px;
+  margin: 5px 0;
+  font-size: 16px;
 }
 
-/* Estilos para el contenedor de canciones */
-#contenedor-canciones {
-    flex: 1;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    padding: 10px; /* Espacio interno para separar las canciones del borde */
-}
-
-/* Estilos para el formulario de subir canción */
 #subir-cancion-form {
-    margin-top: 20px;
-    background-color: #fff; /* Fondo sólido */
-    padding: 20px; /* Espacio interno para separar el contenido del borde */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 #subir-cancion-form input[type="file"],
 #subir-cancion-form input[type="text"],
 #subir-cancion-form input[type="number"] {
-    width: calc(100% - 20px);
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    font-size: 16px;
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 #subir-cancion-form input[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #subir-cancion-form input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos para el encabezado */
-h1 {
-    text-align: center;
-    font-size: 32px;
-    color: #fff; /* Cambiar el color del texto para que sea legible sobre la imagen de fondo */
-    padding: 20px; /* Espacio interno para separar el título del borde */
-    margin: 0; /* Eliminar el margen por defecto */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
-}
-
-/* Estilos para el botón de regreso */
-#boton-regreso {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 999;
-}
-
-#boton-regreso:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos para la imagen de fondo */
-body {
-    background-image: url('/web/images/montaña.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  background-color: #0056b3;
 }
