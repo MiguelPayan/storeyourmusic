@@ -526,7 +526,7 @@ h2 {
         font-size: 3vw; /* Tamaño de fuente en pantallas pequeñas */
     }
 
-    .txt h3 {
+    .general-content h3 {
         font-size: 2vw; /* Tamaño de fuente responsive */
         color: azure;
         text-transform: uppercase;
