@@ -525,6 +525,13 @@ h2 {
     .circle-txt p {
         font-size: 3vw; /* Tamaño de fuente en pantallas pequeñas */
     }
+
+    .txt h3 {
+        font-size: 2vw; /* Tamaño de fuente responsive */
+        color: azure;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
 }
 
     .footer-txt p {
