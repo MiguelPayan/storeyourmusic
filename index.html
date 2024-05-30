@@ -5,10 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Página de Música</title>
+  <title>StoreYourMusic</title>
   <link rel="stylesheet" href="/web/css/style.css" /> <!-- Asegúrate de que la ruta sea correcta -->
   <style>
- 
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -56,14 +55,25 @@
     .btn-1:hover {
       background-color: #d96053;
     }
+
+    .popular-songs {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .popular-song {
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 
 <body>
   <header class="header">
     <input type="checkbox" id="active" />
-    <label for="active" class="menu-btn"><img src="/web/images/nav icon.png" alt="Icono de menú" /><i
-        class="fas fa-bars"></i></label>
+    <label for="active" class="menu-btn">
+      <img src="/web/images/nav icon.png" alt="Icono de menú" />
+      <i class="fas fa-bars"></i>
+    </label>
     <div class="wrapper">
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -84,6 +94,16 @@
       </div>
     </div>
   </header>
+
+  <section class="popular-songs">
+    <h2>Canciones Populares</h2>
+    <div id="popular-songs-container">
+      <!-- Aquí se mostrarán las canciones más populares -->
+    </div>
+  </section>
+
+  <script src="/web/public/js/obtenerCanciones.js"></script> <!-- Asegúrate de que la ruta sea correcta -->
+  <script src="/index.js"></script> <!-- Asegúrate de que la ruta sea correcta -->
 </body>
 
 </html>

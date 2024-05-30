@@ -68,3 +68,22 @@ try {
 } catch (e) {
     console.log(e);
 }
+
+
+// Función para mostrar las canciones populares en el index
+function mostrarCancionesPopulares() {
+    const cancionesPopulares = obtenerCancionesPopulares();
+    const contenedorCanciones = document.getElementById('contenedor-canciones-populares');
+    
+    cancionesPopulares.forEach(cancion => {
+        const elementoCancion = document.createElement('div');
+        elementoCancion.innerHTML = `
+            <h3>${cancion.titulo}</h3>
+            <p>Reproducciones: ${cancion.reproducciones}</p>
+        `;
+        contenedorCanciones.appendChild(elementoCancion);
+    });
+}
+
+// Llama a la función para mostrar las canciones populares cuando se cargue la página
+document.addEventListener('DOMContentLoaded', mostrarCancionesPopulares);
