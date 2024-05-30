@@ -484,13 +484,6 @@ h2 {
 }
 
 @media(max-width: 600px) {
-    h3 {
-        font-size: 2vw; /* Tamaño de fuente responsive */
-        color: azure;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
-    
     .header-txt h1 {
         font-size: 10vw;
     }
@@ -506,6 +499,10 @@ h2 {
     .general-1, .general-2, .general-3, .general-4, .general-5, .general-6 {
         height: auto;
         padding: 50px 20px;
+            font-size: 2vw; /* Tamaño de fuente responsive */
+            color: azure;
+            text-transform: uppercase;
+            margin-bottom: 10px;
     }
 
     .info-circle {
