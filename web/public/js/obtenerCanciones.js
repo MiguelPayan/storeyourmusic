@@ -41,7 +41,9 @@ async function obtenerCanciones() {
                         'Content-Type' : 'application/json'
                       })
                 })
-                audioSource.src = `https://storeyourmusic01.blob.core.windows.net/cloudc/${cancion.titulo}`;
+
+                let url = await limpiarURL(`https://storeyourmusic01.blob.core.windows.net/cloudc/${cancion.titulo}`);
+                audioSource.src = url;
                 audioGlobal.load();
                 audioGlobal.play();
             };
@@ -56,4 +58,22 @@ async function obtenerCanciones() {
     }
 }
 
+function limpiarURL(link){
+    // Texto en UTF-8
+    const textoUtf8 = link;
+
+    // Usar TextEncoder para codificar en UTF-8
+    const utf8Encoder = new TextEncoder();
+    const utf8Bytes = utf8Encoder.encode(textoUtf8);
+
+    // Crear una instancia de TextDecoder para ISO 8859-1
+    const iso88591Decoder = new TextDecoder('iso-8859-1');
+
+    // Decodificar los bytes UTF-8 como ISO 8859-1
+    const textoIso88591 = iso88591Decoder.decode(utf8Bytes);
+    console.log(textoIso88591)
+    return textoIso88591;
+
+}
+               
 obtenerCanciones();

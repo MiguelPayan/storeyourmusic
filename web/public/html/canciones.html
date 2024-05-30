@@ -1,173 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Canciones</title>
-    <link rel="stylesheet" href="/web/css/canciones.css"/>
-</head>
-<body style="background-image: url('/web/images/bg5.png'); background-size: cover; background-position: center;">
-
+    <link rel="stylesheet" href="/web/css/canciones.css" />
+  </head>
+  <body
+    style="
+      background-image: url('/web/images/bg5.png');
+      background-size: cover;
+      background-position: center;
+    "
+  >
     <input type="checkbox" id="active" />
-    <label for="active" class="menu-btn"><img src="/web/images/nav icon.png" alt="Icono de menú" /><i class="fas fa-bars"></i></label>
+    <label for="active" class="menu-btn"
+      ><img src="/web/images/nav icon.png" alt="Icono de menú" /><i
+        class="fas fa-bars"
+      ></i
+    ></label>
     <div class="wrapper">
-        <ul>
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/web/public/html/mi_perfil.html" id="mi_perfil">Mi Perfil</a></li>
-            <li><a href="#" id="cerrar_sesion">Cerrar Sesion</a></li>
-            <li><a href="#" id="usuarios">Usuarios Registrados</a></li>
-            <li><a href="/login.html" class="btn-login">Iniciar Sesión</a></li>
-        </ul>
+      <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li>
+          <a href="/web/public/html/mi_perfil.html" id="mi_perfil">Mi Perfil</a>
+        </li>
+        <li><a href="#" id="cerrar_sesion">Cerrar Sesion</a></li>
+        <li><a href="#" id="usuarios">Usuarios Registrados</a></li>
+        <li><a href="/login.html" class="btn-login">Iniciar Sesión</a></li>
+      </ul>
     </div>
     <h1>Lista de canciones</h1>
     <div id="contenedor-canciones"></div>
-    
-    <div id="global-player" style="position: fixed; bottom: 0; width: 100%; background-color: #333; color: #fff; display: flex; justify-content: center; align-items: center; padding: 10px;">
-        <audio id="audio-global" controls style="width: 100%;">
-            <source id="audio-source" src="" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
 
+    <div
+      id="global-player"
+      style="
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+      "
+    >
+      <audio id="audio-global" controls style="width: 100%">
+        <source id="audio-source" src="" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/text-encoding/0.7.0/encoding.min.js"></script>
     <script src="/web/public/js/obtenerCanciones.js"></script>
     <script src="/index.js"></script>
     <style>
-      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
-    clip-path: circle(25px at calc(100% - 45px) 45px);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  #active:checked ~ .wrapper {
-    clip-path: circle(75%);
-  }
-  
-  .menu-btn {
-    position: fixed;
-    z-index: 9999;
-    right: 20px;
-    top: 20px;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .menu-btn img {
-    height: 100%;
-    width: auto;
-  }
-  
-  #active:checked ~ .menu-btn {
-    background: #fff;
-    color: #4158d0;
-  }
-  
-  #active:checked ~ .menu-btn i:before {
-    content: "\f00d";
-  }
-  
-  .wrapper ul {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    text-align: center;
-  }
-  
-  .wrapper ul li {
-    margin: 15px 0;
-  }
-  
-  .wrapper ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 10px 30px;
-    position: relative;
-    line-height: 50px;
-    transition: all 0.3s ease;
-    display: block;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    white-space: nowrap;
-  }
-  
-  .wrapper ul li a:after {
-    position: absolute;
-    content: "";
-    background: #fff;
-    width: 100%;
-    height: 50px;
-    left: 0;
-    border-radius: 50px;
-    transform: scaleY(0);
-    z-index: -1;
-    transition: transform 0.3s ease;
-  }
-  
-  .wrapper ul li a:hover:after {
-    transform: scaleY(1);
-  }
-  
-  .wrapper ul li a:hover {
-    color: #4158d0;
-  }
-  
-  input[type="checkbox"] {
-    display: none;
-  }
-  
-  .btn-1 {
-    display: inline-block;
-    padding: 12px 45px;
-    border: 1px solid white;
-    color: azure;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .btn-1:hover {
-    color: black;
-    background-color: aliceblue;
-  }
-  
-  .btn-login {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Añade espacio entre el texto y la imagen */
-  }
-  
-  .imagenPerfil {
-    width: 30px; /* Ajusta el tamaño de la imagen */
-    height: 30px; /* Ajusta el tamaño de la imagen */
-    border-radius: 50%;
-    object-fit: cover;
-  }
+      @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(-135deg, #c850c0, #4158d0);
+        clip-path: circle(25px at calc(100% - 45px) 45px);
+        transition: all 0.3s ease-in-out;
+      }
+
+      #active:checked ~ .wrapper {
+        clip-path: circle(75%);
+      }
+
+      .menu-btn {
+        position: fixed;
+        z-index: 9999;
+        right: 20px;
+        top: 20px;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+        background: linear-gradient(-135deg, #c850c0, #4158d0);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .menu-btn img {
+        height: 100%;
+        width: auto;
+      }
+
+      #active:checked ~ .menu-btn {
+        background: #fff;
+        color: #4158d0;
+      }
+
+      #active:checked ~ .menu-btn i:before {
+        content: "\f00d";
+      }
+
+      .wrapper ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+      }
+
+      .wrapper ul li {
+        margin: 15px 0;
+      }
+
+      .wrapper ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 10px 30px;
+        position: relative;
+        line-height: 50px;
+        transition: all 0.3s ease;
+        display: block;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        white-space: nowrap;
+      }
+
+      .wrapper ul li a:after {
+        position: absolute;
+        content: "";
+        background: #fff;
+        width: 100%;
+        height: 50px;
+        left: 0;
+        border-radius: 50px;
+        transform: scaleY(0);
+        z-index: -1;
+        transition: transform 0.3s ease;
+      }
+
+      .wrapper ul li a:hover:after {
+        transform: scaleY(1);
+      }
+
+      .wrapper ul li a:hover {
+        color: #4158d0;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      .btn-1 {
+        display: inline-block;
+        padding: 12px 45px;
+        border: 1px solid white;
+        color: azure;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .btn-1:hover {
+        color: black;
+        background-color: aliceblue;
+      }
+
+      .btn-login {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Añade espacio entre el texto y la imagen */
+      }
+
+      .imagenPerfil {
+        width: 30px; /* Ajusta el tamaño de la imagen */
+        height: 30px; /* Ajusta el tamaño de la imagen */
+        border-radius: 50%;
+        object-fit: cover;
+      }
     </style>
   </body>
 </html>
