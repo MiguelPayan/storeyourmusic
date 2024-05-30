@@ -286,8 +286,8 @@ h2 {
 }
 
 .circle-1 {
-    height: 160px; /* Tamaño del círculo */
-    width: 160px; /* Tamaño del círculo */
+    height: 160px; /* Tamaño inicial del círculo */
+    width: 160px; /* Tamaño inicial del círculo */
     border: 1px solid white;
     border-radius: 50%;
     display: flex; /* Añade flexbox para centrar el contenido */
@@ -295,6 +295,8 @@ h2 {
     align-items: center; /* Centra el contenido verticalmente */
     text-align: center; /* Asegura que el texto esté centrado */
     overflow: hidden; /* Oculta el desbordamiento del texto */
+    transition: all 0.3s ease-in-out; /* Añade una transición suave */
+    padding: 10px; /* Añade padding para que el texto no toque los bordes */
 }
 
 .circle-1 h3 {
@@ -302,6 +304,16 @@ h2 {
     font-size: 0.8vw; /* Ajusta el tamaño de la fuente para que se ajuste dentro del círculo */
     margin: 0; /* Elimina el margen para centrar el texto */
     padding: 0 10px; /* Añade padding para que el texto no toque los bordes */
+}
+
+.circle-1:hover {
+    height: 200px; /* Tamaño del círculo al hacer hover */
+    width: 200px; /* Tamaño del círculo al hacer hover */
+}
+
+.circle-1:hover h3 {
+    font-size: 1.1vw; /* Ajusta el tamaño de la fuente al hacer hover */
+    white-space: normal; /* Permite que el texto se envuelva */
 }
 
 .circle-txt p {
@@ -483,29 +495,38 @@ h2 {
     }
 
     .info-circle {
-        flex-direction: column;
+        flex-wrap: wrap; /* Permite el salto de línea en pantallas pequeñas */
     }
 
     .circle-txt {
-        width: 100%;
+        width: 100%; /* Ajusta el ancho para pantallas pequeñas */
         margin-bottom: 20px;
     }
 
     .circle-1 {
-        height: 80px;
-        width: 80px;
-        padding-top: 25px;
+        height: 100px; /* Tamaño del círculo en pantallas pequeñas */
+        width: 100px; /* Tamaño del círculo en pantallas pequeñas */
+        padding: 0; /* Elimina el padding para asegurar que el texto encaje */
     }
-    
+
     .circle-1 h3 {
-        font-size: 2.0vw; /* Tamaño de fuente responsive */
+        font-size: 2.0vw; /* Tamaño de fuente en pantallas pequeñas */
     }
-    
+
+    .circle-1:hover {
+        height: 120px; /* Tamaño del círculo al hacer hover en pantallas pequeñas */
+        width: 120px; /* Tamaño del círculo al hacer hover en pantallas pequeñas */
+    }
+
+    .circle-1:hover h3 {
+        font-size: 2.5vw; /* Ajusta el tamaño de la fuente al hacer hover en pantallas pequeñas */
+    }
+
     .circle-txt p {
-        font-size: 3.5vw; /* Tamaño de fuente responsive */
+        font-size: 3vw; /* Tamaño de fuente en pantallas pequeñas */
     }
+}
 
     .footer-txt p {
         font-size: 4vw;
     }
-}
