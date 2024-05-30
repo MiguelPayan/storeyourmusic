@@ -85,6 +85,7 @@ document.getElementById('subir-cancion-form').addEventListener('submit', async f
             alert('Error al subir el archivo a SQL: ' + responseText);
         }
     }catch(error){
+        console.log('Error al hacer mandar informacion sql al backend')
         console.log(error);
     }
 });
