@@ -186,24 +186,38 @@ input[type="checkbox"] {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#subir-cancion-form:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 #subir-cancion-form input[type="file"],
 #subir-cancion-form input[type="submit"] {
-    width: calc(100% - 20px);
-    padding: 8px;
-    margin-bottom: 10px;
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 15px;
     box-sizing: border-box;
     font-size: 16px;
     color: #333;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#subir-cancion-form input[type="file"]:focus,
+#subir-cancion-form input[type="submit"]:focus {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+    outline: none;
 }
 
 #subir-cancion-form input[type="submit"] {
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
