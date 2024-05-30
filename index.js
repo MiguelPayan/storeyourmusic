@@ -68,3 +68,52 @@ try {
 } catch (e) {
     console.log(e);
 }
+
+//Obtener artistas con mas reproducciones
+async function artistastop(){
+    try{
+        const artistastop = await fetch('https://backstoreyourmusic.onrender.com/artistastop',{method: 'GET'});
+        let top3 = await artistastop.json();
+        
+        const artista1 = document.getElementById("artista-1");
+        const artista2 = document.getElementById("artista-2");
+        const artista3 = document.getElementById("artista-3");
+        artista1.textContent = top3[0].nombre;
+        artista2.textContent = top3[1].nombre;
+        artista3.textContent = top3[2].nombre;
+    }catch(error){
+        console.error(error);
+    }
+}
+artistastop();
+
+//Obtener canciones con mas reproducciones
+
+async function musicatop(){
+    try{
+        const musicatop = await fetch('https://backstoreyourmusic.onrender.com/musicatop',{method: 'GET'});
+        let top4 = await musicatop.json();
+        console.log(top4);
+        const cancion1 = document.getElementById("cancion-1");
+        const cancion2 = document.getElementById("cancion-2");
+        const cancion3 = document.getElementById("cancion-3");
+        const cancion4 = document.getElementById("cancion-4");
+        cancion2.textContent = top4[0].titulo;
+        cancion1.textContent = top4[1].titulo;
+        cancion3.textContent = top4[2].titulo;
+        cancion4.textContent = top4[3].titulo;
+
+        const visitasCancion1 = document.getElementById("visitas-cancion-1");
+        const visitasCancion2 = document.getElementById("visitas-cancion-2");
+        const visitasCancion3 = document.getElementById("visitas-cancion-3");
+        const visitasCancion4 = document.getElementById("visitas-cancion-4");
+
+        visitasCancion1.textContent = "Visitas: " + top4[0].visitas;
+        visitasCancion2.textContent = "Visitas: " + top4[1].visitas;
+        visitasCancion3.textContent = "Visitas: " + top4[2].visitas;
+        visitasCancion4.textContent = "Visitas: " + top4[3].visitas;
+    }catch(error){
+        console.error(error);
+    }
+}
+musicatop();
