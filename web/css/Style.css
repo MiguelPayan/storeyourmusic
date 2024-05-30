@@ -288,8 +288,8 @@ h2 {
 }
 
 .circle-1 {
-    height: 100px;
-    width: 100px;
+    height: 120px; /* Aumenta el tamaño del círculo */
+    width: 120px; /* Aumenta el tamaño del círculo */
     border: 1px solid white;
     border-radius: 50%;
     padding-top: 20px; /* Reducir el espacio superior para centrar mejor el texto */
@@ -297,7 +297,7 @@ h2 {
 
 .circle-1 h3 {
     color: azure;
-    font-size: 2vw; /* Tamaño de fuente responsive */
+    font-size: 1.5vw; /* Tamaño de fuente responsive */
     margin: 0; /* Elimina el margen para centrar el texto */
 }
 
