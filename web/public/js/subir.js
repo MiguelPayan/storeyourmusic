@@ -49,7 +49,7 @@ document.getElementById('subir-cancion-form').addEventListener('submit', async f
         const responseText = await response.text();
 
         if (response.ok) {
-            alert("Subida a Azure");
+            alert("Tu canción se subio con exito");
         } else {
             alert('Error al subir a Azure: ' + responseText);
         }
@@ -79,7 +79,6 @@ document.getElementById('subir-cancion-form').addEventListener('submit', async f
         const responseText = await response.text();
 
         if (response.ok) {
-            alert("Subida a SQL");
             window.location.reload(); // Recargar la página después de la subida exitosa
         } else {
             alert('Error al subir el archivo a SQL: ' + responseText);
