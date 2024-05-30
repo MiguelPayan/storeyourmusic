@@ -281,23 +281,23 @@ h2 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 10px; /* Añade espacio entre los elementos */
+    margin: 30px; /* Aumenta el espacio entre los elementos */
     white-space: nowrap; /* Evita que el texto se desborde */
     overflow: hidden; /* Oculta el texto que se desborda */
     text-overflow: ellipsis; /* Muestra puntos suspensivos (...) cuando el texto se desborda */
 }
 
 .circle-1 {
-    height: 120px; /* Aumenta el tamaño del círculo */
-    width: 120px; /* Aumenta el tamaño del círculo */
+    height: 160px; /* Aumenta el tamaño del círculo */
+    width: 160px; /* Aumenta el tamaño del círculo */
     border: 1px solid white;
     border-radius: 50%;
-    padding-top: 20px; /* Reducir el espacio superior para centrar mejor el texto */
+    padding-top: 30px; /* Reducir el espacio superior para centrar mejor el texto */
 }
 
 .circle-1 h3 {
     color: azure;
-    font-size: 1.0vw; /* Tamaño de fuente responsive */
+    font-size: 1.3vw; /* Tamaño de fuente responsive */
     margin: 0; /* Elimina el margen para centrar el texto */
 }
 
