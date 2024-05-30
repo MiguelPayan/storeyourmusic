@@ -388,6 +388,19 @@ h2 {
 }
 
 @media(max-width: 991px) {
+
+    .txt h3 {
+        font-size: 2vw; /* Tamaño de fuente responsive */
+        color: azure;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    
+    .txt p {
+        color: beige;
+        font-size: 1.5vw; /* Tamaño de fuente responsive */
+    }
+
     .info-circle {
         flex-wrap: wrap; /* Permite el salto de línea en pantallas pequeñas */
     }
@@ -463,13 +476,6 @@ h2 {
         margin-top: 20px;
     }
 
-    h3 {
-        font-size: 2vw; /* Tamaño de fuente responsive */
-        color: azure;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
-
     .general-1,
     .general-2,
     .general-3,
@@ -484,6 +490,18 @@ h2 {
 }
 
 @media(max-width: 600px) {
+    .txt h3 {
+        font-size: 2vw; /* Tamaño de fuente responsive */
+        color: azure;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    
+    .txt p {
+        color: beige;
+        font-size: 1.5vw; /* Tamaño de fuente responsive */
+    }
+    
     .header-txt h1 {
         font-size: 10vw;
     }
@@ -499,10 +517,6 @@ h2 {
     .general-1, .general-2, .general-3, .general-4, .general-5, .general-6 {
         height: auto;
         padding: 50px 20px;
-            font-size: 2vw; /* Tamaño de fuente responsive */
-            color: azure;
-            text-transform: uppercase;
-            margin-bottom: 10px;
     }
 
     .info-circle {
