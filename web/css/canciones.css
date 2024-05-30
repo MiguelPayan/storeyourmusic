@@ -1,76 +1,243 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
     background-color: #f4f4f4;
-  }
+}
 
-  h1 {
+h1 {
     text-align: center;
     color: #333;
-  }
+    margin-bottom: 20px;
+}
 
-  #contenedor-canciones {
+#contenedor-canciones {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
-  }
-  
-  .contenedor-unacancion {
-    background-color: #fff;
+}
+
+.contenedor-unacancion {
+    background: linear-gradient(135deg, #c850c0, #4158d0);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 200px;
-    transition: transform 0.3s ease;
-  }
-  
-  .contenedor-unacancion:hover {
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+}
+
+.contenedor-unacancion:hover {
     transform: translateY(-5px);
-  }
-  
-  .nombre-cancion {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nombre-cancion {
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
     font-weight: bold;
-  }
-  
-  .control-buttons {
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.control-buttons {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px;
-  }
-  
-  .control-buttons button {
-    background-color: #4158d0;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.control-buttons button {
+    background: linear-gradient(135deg, #4158d0, #c850c0);
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 10px 15px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .control-buttons button:hover {
-    background-color: #3549a2;
-  }
-  
-  .time-display {
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.control-buttons button:hover {
+    background: linear-gradient(135deg, #3549a2, #c850c0);
+    transform: scale(1.1);
+}
+
+.time-display {
     text-align: center;
     font-size: 14px;
-    margin-top: 5px;
-  }
-  
-  #global-player {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#global-player {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #333;
+    background: linear-gradient(135deg, #333, #000);
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-  }
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#global-player audio {
+    width: 90%;
+    max-width: 800px;
+}
+
+@media (max-width: 768px) {
+    .contenedor-unacancion {
+        width: 90%;
+    }
+
+    .control-buttons button {
+        padding: 8px 10px;
+    }
+
+    #global-player audio {
+        width: 100%;
+    }
+}
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+}
+
+#active:checked ~ .wrapper {
+    clip-path: circle(75%);
+}
+
+.menu-btn {
+    position: fixed;
+    z-index: 9999;
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-btn img {
+    height: 100%;
+    width: auto;
+}
+
+#active:checked ~ .menu-btn {
+    background: #fff;
+    color: #4158d0;
+}
+
+#active:checked ~ .menu-btn i:before {
+    content: "\f00d";
+}
+
+.wrapper ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+}
+
+.wrapper ul li {
+    margin: 15px 0;
+}
+
+.wrapper ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 30px;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    white-space: nowrap;
+}
+
+.wrapper ul li a:after {
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.wrapper ul li a:hover:after {
+    transform: scaleY(1);
+}
+
+.wrapper ul li a:hover {
+    color: #4158d0;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 12px 45px;
+    border: 1px solid white;
+    color: azure;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-1:hover {
+    color: black;
+    background-color: aliceblue;
+}
+
+.btn-login {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Añade espacio entre el texto y la imagen */
+}
+
+.imagenPerfil {
+    width: 30px; /* Ajusta el tamaño de la imagen */
+    height: 30px; /* Ajusta el tamaño de la imagen */
+    border-radius: 50%;
+    object-fit: cover;
+}
