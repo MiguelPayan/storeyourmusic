@@ -462,8 +462,8 @@ h2 {
         align-items: center;
         margin-top: 20px;
     }
-    
-    .general-content h3 {
+
+    h3 {
         font-size: 2vw; /* Tamaño de fuente responsive */
         color: azure;
         text-transform: uppercase;
@@ -484,6 +484,13 @@ h2 {
 }
 
 @media(max-width: 600px) {
+    h3 {
+        font-size: 2vw; /* Tamaño de fuente responsive */
+        color: azure;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    
     .header-txt h1 {
         font-size: 10vw;
     }
