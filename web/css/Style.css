@@ -487,6 +487,11 @@ h2 {
         width: 100%;
         margin: 10px 0;
     }
+
+    .general-txt {
+        font-size: 4vw; /* Aumenta el tamaño de fuente en dispositivos móviles */
+    }
+
 }
 
 @media(max-width: 600px) {
@@ -500,13 +505,6 @@ h2 {
 
     .general-content {
         flex-direction: column;
-    }
-
-    .general-1, .general-2, .general-3 .txt{
-            font-size: 2vw; /* Tamaño de fuente responsive */
-            color: azure;
-            text-transform: uppercase;
-            margin-bottom: 10px;  
     }
 
     .general-1, .general-2, .general-3, .general-4, .general-5, .general-6 {
@@ -544,6 +542,10 @@ h2 {
 
     .circle-txt p {
         font-size: 3vw; /* Tamaño de fuente en pantallas pequeñas */
+    }
+
+    .general-txt {
+        font-size: 4vw; /* Aumenta el tamaño de fuente en dispositivos móviles */
     }
 
    
