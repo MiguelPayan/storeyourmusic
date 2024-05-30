@@ -82,16 +82,16 @@ h1 {
 }
 
 #global-player {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: linear-gradient(135deg, #333, #000);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #c850c0, #4158d0);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0);
 }
 
 #global-player audio {

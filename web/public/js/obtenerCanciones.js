@@ -26,7 +26,7 @@ async function obtenerCanciones() {
             const label_visitas = document.createElement("p");
             const visitas = document.createElement("p");
             visitas.textContent = cancion.visitas
-            label_visitas.textContent = "  Visitas:   "
+            label_visitas.textContent = "Visitas: "
 
             contenedor_visitas.appendChild(label_visitas);
             contenedor_visitas.appendChild(visitas);
