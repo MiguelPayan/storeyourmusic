@@ -487,11 +487,6 @@ h2 {
         width: 100%;
         margin: 10px 0;
     }
-
-    .general-txt {
-        font-size: 4vw; /* Aumenta el tamaño de fuente en dispositivos móviles */
-    }
-
 }
 
 @media(max-width: 600px) {
@@ -542,10 +537,6 @@ h2 {
 
     .circle-txt p {
         font-size: 3vw; /* Tamaño de fuente en pantallas pequeñas */
-    }
-
-    .general-txt {
-        font-size: 4vw; /* Aumenta el tamaño de fuente en dispositivos móviles */
     }
 
    
