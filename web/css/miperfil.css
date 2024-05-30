@@ -117,6 +117,13 @@ input[type="checkbox"] {
   display: none;
 }
 
+.imagenPerfil {
+    width: 30px; /* Ajusta el tamaño de la imagen */
+    height: 30px; /* Ajusta el tamaño de la imagen */
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
 #cabecera {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
