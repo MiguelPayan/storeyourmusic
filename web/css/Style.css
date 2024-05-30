@@ -271,7 +271,7 @@ h2 {
 .info-circle {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* Centra los círculos horizontalmente */
     margin-top: 55px;
 }
 
