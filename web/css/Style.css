@@ -1,7 +1,6 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px; /* Añade padding para evitar que el contenido toque los bordes */
 }
 
 .imagenPerfil {
@@ -16,15 +15,15 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 100vh; /* Ajusta la altura mínima al 100% de la pantalla */
     display: flex;
     align-items: center;
     padding: 0 20px;
 }
 
 .header-content {
-    width: 100%;
-    padding: 100px 20px;
+    width: 100%; /* Ajusta el ancho al 100% */
+    padding: 100px 20px; /* Ajusta el relleno */
     text-align: center;
 }
 
@@ -52,9 +51,9 @@ body {
 .wrapper {
     position: fixed;
     top: 0;
-    right: 0;
+    right: 0; /* Ajusta el menú desplegable arriba a la derecha */
     height: 100%;
-    width: 100%;
+    width: 100%; /* Ajusta el ancho al 100% */
     background: linear-gradient(-135deg, #c850c0, #4158d0);
     clip-path: circle(25px at calc(100% - 45px) 45px);
     transition: all 0.3s ease-in-out;
@@ -188,7 +187,6 @@ input[type="checkbox"] {
 
 .general-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 55px;
 }
@@ -204,9 +202,6 @@ input[type="checkbox"] {
     background-size: cover;
     height: 450px;
     padding: 170px 55px;
-    flex: 1 1 calc(33.333% - 20px); /* Ajusta el ancho y el espacio entre columnas */
-    margin: 10px; /* Añade espacio entre los elementos */
-    color: azure;
 }
 
 .general-1 {
@@ -234,13 +229,13 @@ input[type="checkbox"] {
 }
 
 h2 {
-    font-size: 5vw; /* Tamaño de fuente responsive */
+    font-size: 70px;
     text-transform: uppercase;
     color: black;
 }
 
 .txt h3 {
-    font-size: 2vw; /* Tamaño de fuente responsive */
+    font-size: 18px;
     color: azure;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -248,7 +243,7 @@ h2 {
 
 .txt p {
     color: beige;
-    font-size: 1.5vw; /* Tamaño de fuente responsive */
+    font-size: 16px;
 }
 
 .info-1 {
@@ -270,244 +265,191 @@ h2 {
 
 .info-circle {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 55px;
 }
 
 .circle-txt {
-    width: calc(25% - 20px); /* Ajusta el ancho y el espacio entre columnas */
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 10px; /* Añade espacio entre los elementos */
+    margin: 0 10px;
 }
 
 .circle-1 {
     height: 100px;
     width: 100px;
-    border: 1px solid white;
-    border-radius: 50%;
-    padding-top: 35px;
-}
+            border: 1px solid white;
+            border-radius: 50%;
+            padding-top: 35px;
+        }
 
-.circle-1 h3 {
-    color: azure;
-    font-size: 2vw; /* Tamaño de fuente responsive */
-}
+        .circle-1 h3 {
+            color: azure;
+            font-size: 16px;
+        }
 
-.circle-txt p {
-    color: azure;
-    margin-top: 25px;
-    font-size: 1.5vw; /* Tamaño de fuente responsive */
-}
+        .circle-txt p {
+            color: azure;
+            margin-top: 25px;
+        }
 
-.info-2 {
-    padding: 250px 0;
-    background-image: url(/web/images/bg3.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
+        .info-2 {
+            padding: 250px 0;
+            background-image: url(/web/images/bg3.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
 
-.footer {
-    padding: 100px 0 0 0;
-    text-align: center;
-}
+        .testi {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            margin-top: 35px;
+        }
 
-.form {
-    margin-top: 25px;
-}
+        .testi-left,
+        .testi-right {
+            width: 50%;
+            padding-right: 25px;
+        }
 
-.campo {
-    margin-right: 10px;
-    padding: 17px 35px;
-    border: 2px solid black;
-    outline: none;
-    color: black;
-    width: calc(50% - 20px); /* Ajusta el ancho */
-    margin-bottom: 20px; /* Añade espacio entre los campos */
-}
+        .testi-txt {
+            margin-bottom: 25px;
+        }
 
-.campo::placeholder {
-    color: gray;
-}
+        .testi-txt img {
+            width: 50px;
+            margin-bottom: 15px;
+        }
 
-.btn-2 {
-    padding: 17px 35px;
-    border: 2px solid black;
-    background-color: black;
-    color: azure;
-}
+        .testi-txt h3 {
+            font-size: 20px;
+            color: azure;
+        }
 
-.footer-txt {
-    margin-top: 100px;
-    border-top: 1px solid black;
-    padding: 20px 0;
-}
+        .testi-txt p {
+            color: azure;
+            font-size: 16px;
+        }
 
-.footer-txt p {
-    color: black;
-    font-size: 1.5vw; /* Tamaño de fuente responsive */
-}
+        .footer {
+            padding: 100px 0 0 0;
+            text-align: center;
+        }
 
-.menu .navbar ul li .btn-login {
-    padding: 15px 30px;
-    background-color: black;
-    color: azure;
-    border: none;
-    border-radius: 5px;
-    font-size: 2vw; /* Tamaño de fuente responsive */
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-}
+        .form {
+            margin-top: 25px;
+        }
 
-.menu .navbar ul li .btn-login:hover {
-    background-color: #333;
-}
+        .campo {
+            margin-right: 10px;
+            padding: 17px 35px;
+            border: 2px solid black;
+            outline: none;
+            color: black;
+        }
 
-@media(min-width: 992px) {
-    .general {
-        padding: 50px 20px; /* Ajusta el padding */
-        margin-bottom: 50px; /* Añade espacio al final */
-    }
+        .campo::placeholder {
+            color: gray;
+        }
 
-    .general-content {
-        margin-top: 50px; /* Añade espacio arriba */
-    }
+        .btn-2 {
+            padding: 17px 35px;
+            border: 2px solid black;
+            background-color: black;
+            color: azure;
+        }
 
-    .general-1,
-    .general-2,
-    .general-3,
-    .general-4,
-    .general-5,
-    .general-6 {
-        padding: 170px 55px; /* Ajusta el padding */
-        margin-bottom: 20px; /* Añade espacio al final */
-    }
+        .footer-txt {
+            margin-top: 100px;
+            border-top: 1px solid black;
+            padding: 20px 0;
+        }
 
-    h2 {
-        font-size: 3vw; /* Tamaño de fuente responsive */
-    }
+        .footer-txt p {
+            color: black;
+            font-size: 16px;
+        }
 
-    .txt h3 {
-        font-size: 1.5vw; /* Tamaño de fuente responsive */
-    }
+        .menu .navbar ul li .btn-login {
+            padding: 15px 30px;
+            background-color: black;
+            color: azure;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
 
-    .txt p {
-        font-size: 1vw; /* Tamaño de fuente responsive */
-    }
-    
-@media(max-width: 991px) {
-    .menu {
-        padding: 30px;
-    }
+        .menu .navbar ul li .btn-login:hover {
+            background-color: #333;
+        }
 
-    .menu label {
-        display: initial;
-    }
+        @media(max-width:991px) {
+            .menu {
+                padding: 30px;
+            }
 
-    .menu .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: black;
-        display: none;
-    }
+            .menu label {
+                display: initial;
+            }
 
-    .menu .navbar ul li {
-        width: 100%;
-    }
+            .menu .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: black;
+                display: none;
+            }
 
-    #menu:checked~.navbar {
-        display: initial;
-    }
+            .menu .navbar ul li {
+                width: 100%;
+            }
 
-    .header {
-        min-height: 0vh;
-    }
+            #menu:checked~.navbar {
+                display: initial;
+            }
 
-    .header-content {
-        padding: 100px 30px;
-    }
+            .header {
+                min-height: 0vh;
+            }
 
-    .header-txt h1 {
-        font-size: 8vw;
-    }
+            .header-content {
+                padding: 100px 30px;
+            }
 
-    .header-txt p {
-        font-size: 5vw;
-        padding: 0;
-    }
+            .header-txt h1 {
+                font-size: 50px;
+            }
 
-    .general {
-        padding: 30px 20px;
-    }
+            .header-txt p {
+                padding: 0;
+            }
 
-    .general-content {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
+            .general {
+                padding: 30px 20px;
+            }
 
-    .general-1,
-    .general-2,
-    .general-3,
-    .general-4,
-    .general-5,
-    .general-6 {
-        height: 350px;
-        padding: 100px 20px;
-        width: 100%;
-        margin: 10px 0;
-    }
-}
+            .general-content {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+            }
 
-@media(max-width: 600px) {
-    .header-txt h1 {
-        font-size: 10vw;
-    }
-
-    .header-txt p {
-        font-size: 6vw;
-    }
-
-    .general-content {
-        flex-direction: column;
-    }
-
-    .general-1, .general-2, .general-3, .general-4, .general-5, .general-6 {
-        height: auto;
-        padding: 50px 20px;
-    }
-
-    .info-circle {
-        flex-direction: column;
-    }
-
-    .circle-txt {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .circle-1 {
-        height: 80px;
-        width: 80px;
-        padding-top: 25px;
-    }
-
-    .circle-1 h3 {
-        font-size: 4vw;
-    }
-
-    .circle-txt p {
-        font-size: 3.5vw;
-    }
-
-    .footer-txt p {
-        font-size: 4vw;
-    }
-}
+            .general-1,
+            .general-2,
+            .general-3,
+            .general-4,
+            .general-5,
+            .general-6 {
+                height: 350px;
+                padding: 100px 100px;
+            }
+        }
