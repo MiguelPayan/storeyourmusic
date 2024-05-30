@@ -85,8 +85,8 @@ h1 {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(135deg, #c850c0, #4158d0);
-  color: #fff;
+  background: linear-gradient(135deg, #c850c000, #4159d000);
+  color: linear-gradient(135deg, #0effc3f1, #072be0da);;
   display: flex;
   justify-content: center;
   align-items: center;
