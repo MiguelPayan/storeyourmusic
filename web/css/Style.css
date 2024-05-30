@@ -270,26 +270,27 @@ h2 {
 
 .info-circle {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Evita el salto de línea */
     justify-content: center; /* Centra los círculos horizontalmente */
     margin-top: 55px;
+    overflow-x: auto; /* Añade un scroll horizontal si es necesario */
 }
 
 .circle-txt {
-    width: calc(25% - 20px); /* Ajusta el ancho y el espacio entre columnas */
+    min-width: 160px; /* Ajusta el ancho mínimo para que los círculos no se amontonen */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 30px; /* Aumenta el espacio entre los elementos */
+    margin: 0 10px; /* Ajusta el espacio entre los círculos */
     white-space: nowrap; /* Evita que el texto se desborde */
     overflow: hidden; /* Oculta el texto que se desborda */
     text-overflow: ellipsis; /* Muestra puntos suspensivos (...) cuando el texto se desborda */
 }
 
 .circle-1 {
-    height: 160px; /* Aumenta el tamaño del círculo */
-    width: 160px; /* Aumenta el tamaño del círculo */
+    height: 160px; /* Tamaño del círculo */
+    width: 160px; /* Tamaño del círculo */
     border: 1px solid white;
     border-radius: 50%;
     padding-top: 30px; /* Reducir el espacio superior para centrar mejor el texto */
@@ -297,7 +298,7 @@ h2 {
 
 .circle-1 h3 {
     color: azure;
-    font-size: 0.8vw; /* Tamaño de fuente responsive */
+    font-size: 1.3vw; /* Tamaño de fuente responsive */
     margin: 0; /* Elimina el margen para centrar el texto */
 }
 
@@ -373,6 +374,30 @@ h2 {
 }
 
 @media(max-width: 991px) {
+    .info-circle {
+        flex-wrap: wrap; /* Permite el salto de línea en pantallas pequeñas */
+    }
+
+    .circle-txt {
+        width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+
+    .circle-1 {
+        height: 100px; /* Tamaño del círculo en pantallas pequeñas */
+        width: 100px; /* Tamaño del círculo en pantallas pequeñas */
+        padding-top: 25px;
+    }
+
+    .circle-1 h3 {
+        font-size: 4vw; /* Tamaño de fuente en pantallas pequeñas */
+    }
+
+    .circle-txt p {
+        font-size: 3.5vw; /* Tamaño de fuente en pantallas pequeñas */
+    }
+}
+
     .menu {
         padding: 30px;
     }
