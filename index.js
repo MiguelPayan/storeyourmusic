@@ -98,8 +98,8 @@ async function musicatop(){
         const cancion2 = document.getElementById("cancion-2");
         const cancion3 = document.getElementById("cancion-3");
         const cancion4 = document.getElementById("cancion-4");
-        cancion2.textContent = top4[0].titulo;
-        cancion1.textContent = top4[1].titulo;
+        cancion2.textContent = top4[1].titulo;
+        cancion1.textContent = top4[0].titulo;
         cancion3.textContent = top4[2].titulo;
         cancion4.textContent = top4[3].titulo;
 
