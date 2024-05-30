@@ -13,12 +13,6 @@ body {
     background-color: #f4f4f4;
 }
 
-h1 {
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
 #contenedor-canciones {
     display: flex;
     flex-wrap: wrap;
@@ -79,18 +73,21 @@ h1 {
     font-size: 14px;
     margin-top: 10px;
     padding-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: linear-gradient(135deg, #000000, #000000);
 }
 
 #global-player {
   position: fixed;
   bottom: 0;
-  width: 70%;
-  background: none; /* Elimina el fondo */
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  background: #000000; 
+  z-index: 999; 
 }
 
 #global-player audio {
-  width: 70%;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
