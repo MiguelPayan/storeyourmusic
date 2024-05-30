@@ -299,7 +299,7 @@ h2 {
 
 .circle-1 h3 {
     color: azure;
-    font-size: 1.2vw; /* Ajusta el tamaño de la fuente para que se ajuste dentro del círculo */
+    font-size: 0.8vw; /* Ajusta el tamaño de la fuente para que se ajuste dentro del círculo */
     margin: 0; /* Elimina el margen para centrar el texto */
     padding: 0 10px; /* Añade padding para que el texto no toque los bordes */
 }
@@ -392,13 +392,13 @@ h2 {
     }
 
     .circle-1 h3 {
-        font-size: 3vw; /* Tamaño de fuente en pantallas pequeñas */
+        font-size: 0.8vw; /* Tamaño de fuente en pantallas pequeñas */
     }
 
     .circle-txt p {
         font-size: 3vw; /* Tamaño de fuente en pantallas pequeñas */
     }
-    
+
     .menu {
         padding: 30px;
     }
