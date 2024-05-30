@@ -462,6 +462,13 @@ h2 {
         align-items: center;
         margin-top: 20px;
     }
+    
+    .general-content h3 {
+        font-size: 2vw; /* Tamaño de fuente responsive */
+        color: azure;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
 
     .general-1,
     .general-2,
@@ -526,12 +533,7 @@ h2 {
         font-size: 3vw; /* Tamaño de fuente en pantallas pequeñas */
     }
 
-    .general-content h3 {
-        font-size: 2vw; /* Tamaño de fuente responsive */
-        color: azure;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
+   
 }
 
     .footer-txt p {
